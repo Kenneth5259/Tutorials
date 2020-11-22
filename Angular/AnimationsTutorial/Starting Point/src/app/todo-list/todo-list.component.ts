@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../models/todo.model';
+import { Subscription } from 'rxjs';
+
+import { TodoService} from '../services/todo-service.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -8,14 +11,15 @@ import { Todo } from '../models/todo.model';
 })
 export class TodoListComponent implements OnInit {
 
-  items: Todo[];
+  // definte an aray of Todo items
+  items: Todo[] = [];
+  serviceSubscription: Subscription;
 
-  constructor() { 
-    this.items = [];
-    this.items.push(new Todo('test'));
+  constructor(private todoService: TodoService) { 
   }
 
   ngOnInit(): void {
+    this.todoService.getAllItems().subscribe(items => this.items = items);
   }
 
 }

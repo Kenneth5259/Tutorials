@@ -1,19 +1,30 @@
 .item {
     display: flex;
+    flex-basis: content;
     position: relative;
     justify-content: center;
     align-items: center;
-    max-width: 80%;
-    margin: auto;
+    max-width: 50%;
+    margin: 1rem auto;
+    border: 1px solid lightcoral;
+    border-radius: 1rem;
 }
 
 .item__title {
     font-size: 1.25rem;
+    color: lightcoral;
+    margin: 0.5rem;
 }
 
+/*  
+    Setting position to absolute 
+    and adjusting Z index allows 
+    the div to act as a strike through
+    when the width is 100%
+*/
 .item__complete {
     position: absolute;
     z-index: 2;
     border-bottom: 2px solid black;
-    width: 100%;
+    width: 98%;
 }
