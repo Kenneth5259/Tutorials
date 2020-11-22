@@ -1,0 +1,19 @@
+.item {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+.item__title {
+    font-size: 1.25rem;
+}
+
+.item__complete {
+    position: absolute;
+    z-index: 2;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
