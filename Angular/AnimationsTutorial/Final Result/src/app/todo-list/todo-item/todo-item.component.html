@@ -1,0 +1,6 @@
+<!--Render the item with a title, and complete the item on click-->
+<div class="item" (click)="onItemComplete()">
+    <p class="item__title">{{item.getTitle()}}</p>
+    <!--Render the strikethrough div only if the complete status is true-->
+    <div class="item__complete" [@itemComplete]="animationState"></div>
+</div>

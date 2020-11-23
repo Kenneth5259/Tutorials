@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    margin: auto;
+}
+.form__label {
+    font-size: 1.25rem;
+    color: lightcoral;
+    font-weight: bolder;
+}
+.form__input {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    width: 98%;
+    font-size: 1.25rem;
+    text-align: center;
+    border: 1px solid lightcoral;
+    color: lightcoral;
+    border-radius: 1rem;
+    outline: none;
+}
+.form__button {
+    border: none;
+    outline: none;
+    background-color: lightcoral;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
